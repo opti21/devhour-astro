@@ -15,7 +15,7 @@ const { title, description, publishDate, url, ytLink, audioLink } = Astro.props 
 <article class="episode pb-8 mb-8 border-b-4 border-slate-600">
 	<header>
 		<time class="m-0 text-2xl text-gray-500">{publishDate}</time>
-		<a href={url}><h1 class="text-white font-bold text-3xl mb-2">{title}</h1></a>
+		<h1 class="text-white font-bold text-3xl mb-2">{title}</h1>
 	</header>
 	<p>{description}</p>
 	{ytLink && 
