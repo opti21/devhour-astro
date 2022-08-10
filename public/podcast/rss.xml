@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<channel>
+<title>DevHour Podcast</title> 
+<link>https://devhour.live/</link>
+<language>en-us</language>
+<copyright>© 2022 ThePrimeagen</copyright>
+<itunes:author>ThePrimeagen</itunes:author>
+<description> DevHour Deez very informative episodes from top creators in the developer space.
+</description>
+<itunes:type>serial</itunes:type>
+<itunes:owner> <itunes:name>ThePrimeagen</itunes:name>
+<itunes:email>the.primeagen@gmail.com</itunes:email>
+</itunes:owner>
+<itunes:image
+href="https://devhour.live/podcast/devhourlogo.jpg"
+/>
+<itunes:category text="Technology"> </itunes:category>
+<itunes:explicit>true</itunes:explicit>
+<item>
+    <title>
+    You only Git Merge?!? feat Theo
+    </title>
+    <description>
+    </description>
+    <link>https://devhour.s3.amazonaws.com/dv1_t_rebase.mp3</link>
+    <itunes:image>https://devhour.live/podcast/images/dev1.png</itunes:image>
+    <enclosure
+    length="10276558"
+    type="audio/mpeg"
+    url="https://devhour.s3.amazonaws.com/dv1_t_rebase.mp3"
+    />
+    <pubDate>Wed, 20 Apr 2022 01:15:00 GMT</pubDate>
+    <itunes:duration>658</itunes:duration>
+    <itunes:explicit>true</itunes:explicit>
+</item>
+<item>
+    <title>
+    YOU DONT UNIT TEST??? - Theo
+    </title>
+    <description>
+    </description>
+    <link>https://devhour.s3.amazonaws.com/dv1_unit_test.mp3</link>
+    <itunes:image>https://devhour.live/podcast/images/dev1-pt2.png</itunes:image>
+    <enclosure
+    length="43789774"
+    type="audio/mpeg"
+    url="https://devhour.s3.amazonaws.com/dv1_unit_test.mp3"
+    />
+    <pubDate>Mon, 25 Apr 2022 01:15:00 GMT</pubDate>
+    <itunes:duration>2807</itunes:duration>
+    <itunes:explicit>true</itunes:explicit>
+</item>
+<item>
+    <title>
+    Ken Wheeler - Modern JavaScript, Beats, Rick Rolling
+    </title>
+    <description>
+    </description>
+    <link>https://devhour.s3.amazonaws.com/dv2_kw.mp3</link>
+    <itunes:image>https://devhour.live/podcast/images/dev2.png</itunes:image>
+    <enclosure
+    length="85531342"
+    type="audio/mpeg"
+    url="https://devhour.s3.amazonaws.com/dv2_kw.mp3"
+    />
+    <pubDate>Fri, 20 May 2022 01:15:00 GMT</pubDate>
+    <itunes:duration>2807</itunes:duration>
+    <itunes:explicit>true</itunes:explicit>
+</item>
+<item>
+    <title>
+    Ryan Carniato - Creator of Solid JS
+    </title>
+    <description>
+    </description>
+    <link>https://devhour.s3.amazonaws.com/dv3_rc.mp3</link>
+    <itunes:image>https://devhour.live/podcast/images/dev3.png</itunes:image>
+    <enclosure
+    length="73767118"
+    type="audio/mpeg"
+    url="https://devhour.s3.amazonaws.com/dv3_rc.mp3"
+    />
+    <pubDate>Fri, 03 Jun 2022 01:15:00 GMT</pubDate>
+    <itunes:duration>4728</itunes:duration>
+    <itunes:explicit>true</itunes:explicit>
+</item>
+<item>
+    <title>
+    Jon Gjengset | All Things Rust | Rust For Rustaceans
+    </title>
+    <description>
+    </description>
+    <link>https://devhour.s3.amazonaws.com/dv4_jh.mp3</link>
+    <enclosure
+    length="80795300"
+    type="audio/mpeg"
+    url="https://devhour.s3.amazonaws.com/dv4_jh.mp3"
+    />
+    <pubDate>Thu, 23 Jun 2022 12:00:00 GMT</pubDate>
+    <itunes:duration>3664</itunes:duration>
+    <itunes:explicit>true</itunes:explicit>
+</item>
+<item>
+    <title>
+    Madison Kanna - Based Engineer and Hot Takes
+    </title>
+    <description>
+    </description>
+    <link>https://devhour.s3.amazonaws.com/dv5_mk.mp3</link>
+    <enclosure
+    length="51900416"
+    type="audio/mpeg"
+    url="https://devhour.s3.amazonaws.com/dv5_mk.mp3"
+    />
+    <pubDate>Mon, 11 Jul 2022 11:30:00 CDT</pubDate>
+    <itunes:duration>3239</itunes:duration>
+    <itunes:explicit>true</itunes:explicit>
+</item>
+<item>
+    <title>
+    Thorsten Ball - Compilers. Compilers. Compilers.
+    </title>
+    <description>
+    </description>
+    <link>https://devhour.s3.amazonaws.com/dv6_tb.mp3</link>
+    <enclosure
+    length="146348276"
+    type="audio/mpeg"
+    url="https://devhour.s3.amazonaws.com/dv6_tb.mp3"
+    />
+    <pubDate>Fri, 05 Aug 2022 11:30:00 CDT</pubDate>
+    <itunes:duration>4492</itunes:duration>
+    <itunes:explicit>true</itunes:explicit>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,72 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Episode from '../components/Episode.astro';
+
+let title = 'Devhour Podcast';
+let description = '';
+
+// Use Astro.glob to fetch all post with associated frontmatter
+const unsortedEpisodes = await Astro.glob('./episodes/*.md');
+const episodes = unsortedEpisodes.sort(function (a, b) {
+	return (
+		new Date(b.frontmatter.publishDate).valueOf() - new Date(a.frontmatter.publishDate).valueOf()
+	);
+});
+---
+
+<html lang="en">
+
+<head>
+	<BaseHead title={title} description={description} />
+</head>
+
+<body class="bg-slate-800">
+	<div class="wrapper container mx-auto max-w-3xl">
+		<!-- <Header /> -->
+		<main class="content mt-4 mb-72">
+			<section class="intro pb-8 mb-2 border-b-4 border-slate-600">
+				<h1 class="text-3xl font-bold text-white">{title}</h1>
+				<div class="links flex flex-row gap-2">
+
+					<div class="spotify text-white my-2">
+						<a href="https://open.spotify.com/show/4MLaDrQcQ5mi3rsnvWkwPt" target="_blank" class="hover:underline flex items-center">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+								class="bi bi-spotify" viewBox="0 0 16 16">
+								<path
+									d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.669 11.538a.498.498 0 0 1-.686.165c-1.879-1.147-4.243-1.407-7.028-.77a.499.499 0 0 1-.222-.973c3.048-.696 5.662-.397 7.77.892a.5.5 0 0 1 .166.686zm.979-2.178a.624.624 0 0 1-.858.205c-2.15-1.321-5.428-1.704-7.972-.932a.625.625 0 0 1-.362-1.194c2.905-.881 6.517-.454 8.986 1.063a.624.624 0 0 1 .206.858zm.084-2.268C10.154 5.56 5.9 5.419 3.438 6.166a.748.748 0 1 1-.434-1.432c2.825-.857 7.523-.692 10.492 1.07a.747.747 0 1 1-.764 1.288z" />
+							</svg>
+							<span class="ml-2">
+								Spotify
+							</span>
+						</a>
+					</div>
+
+					<div class="rss text-white my-2">
+						<a href="/podcast/rss.xml" target="_blank" class="hover:underline flex items-center">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+								class="bi bi-rss-fill" viewBox="0 0 16 16">
+								<path
+									d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm1.5 2.5c5.523 0 10 4.477 10 10a1 1 0 1 1-2 0 8 8 0 0 0-8-8 1 1 0 0 1 0-2zm0 4a6 6 0 0 1 6 6 1 1 0 1 1-2 0 4 4 0 0 0-4-4 1 1 0 0 1 0-2zm.5 7a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+							</svg>
+							<span class="ml-2">
+								RSS Feed
+							</span>
+						</a>
+					</div>
+				</div>
+
+				<p>{description}</p>
+			</section>
+			<section aria-label="Episode list">
+				{episodes.map(({ url, frontmatter }) => (
+				<Episode title={frontmatter.title} description={frontmatter.description}
+					publishDate={frontmatter.publishDate} url={url} ytLink={frontmatter.ytLink}
+					audioLink={frontmatter.audioLink} />
+				))}
+			</section>
+		</main>
+	</div>
+</body>
+
+</html>
