@@ -4,7 +4,7 @@ import Header from '../components/Header.astro';
 import Episode from '../components/Episode.astro';
 
 let title = 'Devhour Podcast';
-let description = '';
+let description = 'DevHour Deez very informative episodes from top creators in the developer space.';
 
 // Use Astro.glob to fetch all post with associated frontmatter
 const unsortedEpisodes = await Astro.glob('./episodes/*.md');
@@ -22,15 +22,17 @@ const episodes = unsortedEpisodes.sort(function (a, b) {
 </head>
 
 <body class="bg-slate-800">
-	<div class="wrapper container mx-auto max-w-3xl">
+	<div class="wrapper container mx-auto max-w-3xl px-4 lg:px-0">
 		<!-- <Header /> -->
 		<main class="content mt-4 mb-72">
 			<section class="intro pb-8 mb-2 border-b-4 border-slate-600">
 				<h1 class="text-3xl font-bold text-white">{title}</h1>
+				<p class="text-white">{description}</p>
 				<div class="links flex flex-row gap-2">
 
 					<div class="spotify text-white my-2">
-						<a href="https://open.spotify.com/show/4MLaDrQcQ5mi3rsnvWkwPt" target="_blank" class="hover:underline flex items-center">
+						<a href="https://open.spotify.com/show/4MLaDrQcQ5mi3rsnvWkwPt" target="_blank"
+							class="hover:underline flex items-center">
 							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
 								class="bi bi-spotify" viewBox="0 0 16 16">
 								<path
@@ -56,12 +58,14 @@ const episodes = unsortedEpisodes.sort(function (a, b) {
 					</div>
 				</div>
 
-				<p>{description}</p>
 			</section>
 			<section aria-label="Episode list">
 				{episodes.map(({ url, frontmatter }) => (
-				<Episode title={frontmatter.title} description={frontmatter.description}
-					publishDate={frontmatter.publishDate} url={url} ytLink={frontmatter.ytLink}
+				<Episode title={frontmatter.title} 
+					description={frontmatter.description}
+					publishDate={frontmatter.publishDate} 
+					url={url} 
+					youtubeID={frontmatter.youtubeID}
 					audioLink={frontmatter.audioLink} />
 				))}
 			</section>

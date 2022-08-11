@@ -4,31 +4,25 @@ export interface Props {
 	description: string;
 	publishDate: string;
 	url: string | undefined;
-	ytLink: string;
+	youtubeID: string | undefined;
 	audioLink: string;
 }
 
-const { title, description, publishDate, url, ytLink, audioLink } = Astro.props as Props;
+const { title, description, publishDate, url, youtubeID, audioLink } = Astro.props as Props;
 
 ---
+<script>
+	import '@justinribeiro/lite-youtube';	
+</script>
 
 <article class="episode pb-8 mb-8 border-b-4 border-slate-600">
 	<header>
-		<time class="m-0 text-2xl text-gray-500">{publishDate}</time>
-		<h1 class="text-white font-bold text-3xl mb-2">{title}</h1>
+		<time class="m-0 text-xl sm:text-2xl text-gray-500">{publishDate}</time>
+		<h1 class="text-white font-bold text-xl sm:text-3xl mb-2">{title}</h1>
 	</header>
 	<p>{description}</p>
-	{ytLink && 
-		<div class="aspect-video">
-			<iframe 
-				class="w-full h-full"
-				src={ytLink} 
-				title="YouTube video player" 
-				frameborder="0" 
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-				allowfullscreen>
-			</iframe>
-		</div>
+	{youtubeID &&
+		<lite-youtube videoid={youtubeID}></lite-youtube>
 	}
 	{audioLink && <div>
 		<audio class="w-full mt-4" controls src={audioLink} />
